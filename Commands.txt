@@ -1,0 +1,130 @@
+Microsoft Windows [Version 10.0.19045.2364]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\.NET\ASP_mvc\MVC commands>dotnet new sln
+The template "Solution File" was created successfully.
+
+
+E:\.NET\ASP_mvc\MVC commands>dotnet new classlib -o BLL
+The template "Class Library" was created successfully.
+
+Processing post-creation actions...
+Restoring E:\.NET\ASP_mvc\MVC commands\BLL\BLL.csproj:
+  Determining projects to restore...
+  Restored E:\.NET\ASP_mvc\MVC commands\BLL\BLL.csproj (in 65 ms).
+Restore succeeded.
+
+
+
+E:\.NET\ASP_mvc\MVC commands>dotnet new classlib -o BOL
+The template "Class Library" was created successfully.
+
+Processing post-creation actions...
+Restoring E:\.NET\ASP_mvc\MVC commands\BOL\BOL.csproj:
+  Determining projects to restore...
+  Restored E:\.NET\ASP_mvc\MVC commands\BOL\BOL.csproj (in 68 ms).
+Restore succeeded.
+
+
+
+E:\.NET\ASP_mvc\MVC commands>dotnet new classlib -o DAL
+The template "Class Library" was created successfully.
+
+Processing post-creation actions...
+Restoring E:\.NET\ASP_mvc\MVC commands\DAL\DAL.csproj:
+  Determining projects to restore...
+  Restored E:\.NET\ASP_mvc\MVC commands\DAL\DAL.csproj (in 65 ms).
+Restore succeeded.
+
+
+
+E:\.NET\ASP_mvc\MVC commands>dotnet new MVC -o Application
+No templates or subcommands found matching: 'MVC'.
+Did you mean one of the following templates?
+   dotnet new sln
+   dotnet new mvc
+   dotnet new web
+   dotnet new wpf
+
+To list installed templates similar to 'MVC', run:
+   dotnet new list MVC
+To search for the templates on NuGet.org, run:
+   dotnet new search MVC
+
+
+For details on the exit code, refer to https://aka.ms/templating-exit-codes#103
+
+E:\.NET\ASP_mvc\MVC commands>dotnet new mvc -o Application
+The template "ASP.NET Core Web App (Model-View-Controller)" was created successfully.
+This template contains technologies from parties other than Microsoft, see https://aka.ms/aspnetcore/7.0-third-party-notices for details.
+
+Processing post-creation actions...
+Restoring E:\.NET\ASP_mvc\MVC commands\Application\Application.csproj:
+  Determining projects to restore...
+  Restored E:\.NET\ASP_mvc\MVC commands\Application\Application.csproj (in 74 ms).
+Restore succeeded.
+
+
+
+E:\.NET\ASP_mvc\MVC commands>dotnet sln add BLL
+Project `BLL\BLL.csproj` added to the solution.
+
+E:\.NET\ASP_mvc\MVC commands>dotnet sln add BOL
+Project `BOL\BOL.csproj` added to the solution.
+
+E:\.NET\ASP_mvc\MVC commands>dotnet sln add DAL
+Project `DAL\DAL.csproj` added to the solution.
+
+E:\.NET\ASP_mvc\MVC commands>dotnet sln add Application
+Project `Application\Application.csproj` added to the solution.
+
+E:\.NET\ASP_mvc\MVC commands>cd Application
+
+E:\.NET\ASP_mvc\MVC commands\Application>dotnet add reference ../BLL
+Reference `..\BLL\BLL.csproj` added to the project.
+
+E:\.NET\ASP_mvc\MVC commands\Application>dotnet add reference ../BOL
+Reference `..\BOL\BOL.csproj` added to the project.
+
+E:\.NET\ASP_mvc\MVC commands\Application>dotnet add reference ../DAL
+Reference `..\DAL\DAL.csproj` added to the project.
+
+E:\.NET\ASP_mvc\MVC commands\Application>cd ..
+
+E:\.NET\ASP_mvc\MVC commands>cd DAL
+
+E:\.NET\ASP_mvc\MVC commands\DAL>dotnet add reference ../BOL
+Reference `..\BOL\BOL.csproj` added to the project.
+
+E:\.NET\ASP_mvc\MVC commands\DAL>cd ..
+
+E:\.NET\ASP_mvc\MVC commands>cd BLL
+
+E:\.NET\ASP_mvc\MVC commands\BLL>dotnet add reference ../BOL
+Reference `..\BOL\BOL.csproj` added to the project.
+
+E:\.NET\ASP_mvc\MVC commands\BLL>dotnet add reference ../DAL
+Reference `..\DAL\DAL.csproj` added to the project.
+
+E:\.NET\ASP_mvc\MVC commands\BLL>
+
+
+
+
+
+
+--------------------------------------------------------------
+INSIDE DAL
+dotnet add package mysql.data
+
+
+
+
+
+
+--------------------------------------------------------------------
+
+dotnet new webapi -o file
+dotnet add package Microsoft.AspNetCore.Cors
+dotnet add package mysql.data
+dotnet add package Microsoft.AspNetCore.Diagnostics
